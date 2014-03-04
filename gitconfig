@@ -1,0 +1,7 @@
+[user]
+	name = Chirag Tailor
+	email = ctailor2@gmail.com
+[core]
+	editor = vim
+[color]
+	ui = true
