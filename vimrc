@@ -9,7 +9,9 @@ execute pathogen#infect()
 
 syntax on 					" syntax highlighting
 set relativenumber 				" relative line numbers by default
-set tabstop=2 shiftwidth=2      		" a tab is two spaces (or set this to 4)
+set tabstop=2 softtabstop=2 shiftwidth=2 expandtab      		" a tab is two spaces
+
+execute "set colorcolumn=" . join(range(81,335), ',')
 
 " bslash-L to toggle absolute line numbers
 nnoremap <Bslash>L :set number<CR>	
@@ -24,6 +26,11 @@ call vundle#rc()
 
 " let Vundle manage Bundle
 Bundle 'gmarik/vundle'
+
+" ctrl-P file finder
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
 
 " splits
 set splitbelow

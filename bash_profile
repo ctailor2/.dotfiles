@@ -1,8 +1,5 @@
-# Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
-
-# Set postgres server data path
-export PGDATA="/usr/local/pgsql/data"
+# Load the default .profile
+[[ -s "$HOME/.profile" ]] && source "$HOME/.profile"
 
 # Add git branchname to end of terminal prompt
 parse_git_branch() {
@@ -11,5 +8,9 @@ parse_git_branch() {
 export PS1="\u@\h \W\[\033[36m\]\$(parse_git_branch)\[\033[00m\] $ "
 
 alias ls="ls -F"
-alias be='bundle exec'
+alias be="bundle exec"
+
 export PATH=/usr/local/bin:$PATH
+
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
