@@ -1,7 +1,11 @@
 [user]
-	name = Chirag Tailor
-	email = ctailor2@gmail.com
+  name = Chirag Tailor
+  email = ctailor2@gmail.com
 [core]
-	editor = vim
+  editor = vim
 [color]
-	ui = true
+  ui = true
+[alias]
+  co = checkout
+[github]
+  user = ctailor2
