@@ -11,7 +11,9 @@ syntax on 					" syntax highlighting
 set relativenumber 				" relative line numbers by default
 set tabstop=2 softtabstop=2 shiftwidth=2 expandtab      		" a tab is two spaces
 
+" use a different background color past 80 characters
 execute "set colorcolumn=" . join(range(81,335), ',')
+highlight ColorColumn ctermbg=7 guibg=LightGray
 
 " bslash-L to toggle absolute line numbers
 nnoremap <Bslash>L :set number<CR>	
@@ -27,10 +29,19 @@ call vundle#rc()
 " let Vundle manage Bundle
 Bundle 'gmarik/vundle'
 
+" vim tmux nav
+Bundle 'christoomey/vim-tmux-navigator'
+
+" vim lisp/scheme indentation
+autocmd filetype lisp,scheme,art setlocal equalprg=scmindent.rkt
+
 " ctrl-P file finder
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_max_files = 0
+let g:ctrlp_use_caching = 1
+let g:ctrlp_clear_cache_on_exit = 1
 
 " splits
 set splitbelow
