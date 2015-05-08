@@ -62,3 +62,7 @@ nnoremap ˚ gt
 
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
+
+" ctags
+set tags=.git/tags
+

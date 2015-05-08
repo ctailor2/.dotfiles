@@ -7,5 +7,8 @@
   ui = true
 [alias]
   co = checkout
+  ctags = !.git/hooks/ctags
 [github]
   user = ctailor2
+[init]
+  templatedir = ~/.git_template
