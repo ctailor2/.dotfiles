@@ -32,6 +32,16 @@ Bundle 'gmarik/vundle'
 " vim tmux nav
 Bundle 'christoomey/vim-tmux-navigator'
 
+" vim rspec
+Bundle 'thoughtbot/vim-rspec'
+let g:rspec_command = 'call Send_to_Tmux("rspec --format documentation {spec}\n")'
+
+" vim rspec mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+
 " vim lisp/scheme indentation
 autocmd filetype lisp,scheme,art setlocal equalprg=scmindent.rkt
 
