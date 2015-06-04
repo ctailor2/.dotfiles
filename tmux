@@ -38,3 +38,20 @@ bind M \
   set -g mouse-select-pane off \;\
   set -g mouse-select-window off \;\
 
+# List of plugins
+# Supports `github_username/repo` or full git repo URLs
+set -g @tpm_plugins '              \
+  tmux-plugins/tpm                 \
+  tmux-plugins/tmux-resurrect      \
+  tmux-plugins/tmux-continuum      \
+'
+
+# Other examples:
+# github_username/plugin_name    \
+# git@github.com/user/plugin     \
+# git@bitbucket.com/user/plugin  \
+
+# initializes the TMUX plugin manager
+# keep this line at the very bottom of tmux.conf
+run-shell '~/.tmux/plugins/tpm/tpm'
+
