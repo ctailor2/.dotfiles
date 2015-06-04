@@ -23,3 +23,18 @@ bind-key -t vi-copy y copy-pipe "reattach-to-user-namespace pbcopy"
 unbind -t vi-copy Enter
 bind-key -t vi-copy Enter copy-pipe "reattach-to-user-namespace pbcopy"
 
+# Need SIMBL & MouseTerm installed for this to work
+# toggle mouse mode on with prefix m
+bind m \
+  set -g mode-mouse on \;\
+  set -g mouse-resize-pane on \;\
+  set -g mouse-select-pane on \;\
+  set -g mouse-select-window on \;\
+
+# toggle mouse mode off with prefix M
+bind M \
+  set -g mode-mouse off \;\
+  set -g mouse-resize-pane off \;\
+  set -g mouse-select-pane off \;\
+  set -g mouse-select-window off \;\
+

@@ -29,6 +29,7 @@ export PS1="$USERNAME: $YELLOW$DIRECTORY$CYAN\$(parse_git_branch)$NORMAL $ "
 alias ls="ls -F"
 alias be="bundle exec"
 alias gs="git status"
+alias c="clear"
 
 export PATH=/usr/local/bin:$PATH
 
