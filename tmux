@@ -15,6 +15,9 @@ unbind ^\
 # user vim keybindings in copy mode
 setw -g mode-keys vi
 
+# tell tmux to use the system clipboard
+set-option -g default-command "reattach-to-user-namespace -l bash"
+
 # setup 'v' to begin selection as in vim
 bind-key -t vi-copy v begin-selection
 bind-key -t vi-copy y copy-pipe "reattach-to-user-namespace pbcopy"

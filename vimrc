@@ -76,3 +76,5 @@ map <C-n> :NERDTreeToggle<CR>
 " ctags
 set tags=.git/tags
 
+" sync the unnamed register with the system clipboard
+set clipboard+=unnamed
