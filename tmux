@@ -19,12 +19,12 @@ setw -g mode-keys vi
 set-option -g default-command "reattach-to-user-namespace -l bash"
 
 # setup 'v' to begin selection as in vim
-bind-key -t vi-copy v begin-selection
-bind-key -t vi-copy y copy-pipe "reattach-to-user-namespace pbcopy"
+bind-key -T copy-mode-vi v send -X begin-selection
+bind-key -T copy-mode-vi y send -X copy-pipe "reattach-to-user-namespace pbcopy"
 
 # update default binding of 'enter' to also use copy-pipe
-unbind -t vi-copy Enter
-bind-key -t vi-copy Enter copy-pipe "reattach-to-user-namespace pbcopy"
+unbind -T copy-mode-vi Enter
+bind-key -T copy-mode-vi Enter send -X copy-pipe "reattach-to-user-namespace pbcopy"
 
 # Need SIMBL & MouseTerm installed for this to work
 # toggle mouse mode on with prefix m
