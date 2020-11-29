@@ -27,7 +27,6 @@ export PS1="$USERNAME: $YELLOW$DIRECTORY$CYAN\$(parse_git_branch)$NORMAL $ "
 
 # Aliases
 alias ls="ls -F"
-alias be="bundle exec"
 alias gs="git status"
 alias c="clear"
 alias hist="history"
@@ -37,9 +36,10 @@ export PATH=/usr/local/bin:$PATH
 # Use VI mode for command line editing
 set -o vi
 
-# Set bundler editor for bundle opening gems
-export BUNDLER_EDITOR='mvim -f'
+# Java Homes
+export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
 
-# Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+alias java8='export JAVA_HOME=$JAVA_8_HOME'
 
+# default Java version
+java8
