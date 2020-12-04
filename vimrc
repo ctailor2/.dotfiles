@@ -11,10 +11,6 @@ syntax on 					" syntax highlighting
 set relativenumber 				" relative line numbers by default
 set tabstop=2 softtabstop=2 shiftwidth=2 expandtab      		" a tab is two spaces
 
-" use a different background color past 80 characters
-execute "set colorcolumn=" . join(range(81,335), ',')
-highlight ColorColumn ctermbg=7 guibg=LightGray
-
 " bslash-L to toggle absolute line numbers
 nnoremap <Bslash>L :set number<CR>	
 " bslash-l to toggle relative line numbers
@@ -31,16 +27,6 @@ Bundle 'gmarik/vundle'
 
 " vim tmux nav
 Bundle 'christoomey/vim-tmux-navigator'
-
-" vim rspec
-Bundle 'thoughtbot/vim-rspec'
-let g:rspec_command = 'call Send_to_Tmux("rspec --format documentation {spec}\n")'
-
-" vim rspec mappings
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
 
 " vim lisp/scheme indentation
 autocmd filetype lisp,scheme,art setlocal equalprg=scmindent.rkt

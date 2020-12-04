@@ -10,7 +10,5 @@
   ctags = !.git/hooks/ctags
 [github]
   user = ctailor2
-[init]
-  templatedir = ~/.git_template
 [push]
   default = simple
