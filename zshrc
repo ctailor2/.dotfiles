@@ -79,3 +79,5 @@ source $ZSH/oh-my-zsh.sh
 eval "$(/opt/homebrew/bin/brew shellenv)" # Add homebrew to path
 
 set -o vi # Use VI mode for command line editing
+
+alias k="kubectl"
